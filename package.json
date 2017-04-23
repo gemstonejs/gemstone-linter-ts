@@ -34,7 +34,7 @@
         "typescript":                     "~2.2.2"
     },
     "engines": {
-        "node":                           ">=6.0.0"
+        "node":                           ">=7.6.0"
     },
     "scripts": {
         "prepublish": "eslint --config eslint.yaml gemstone-linter-ts.js"
