@@ -5,7 +5,7 @@
 */
 
 /*  load external requirements  */
-const fs        = require("fs-promise")
+const fs        = require("mz/fs")
 const path      = require("path")
 const TSLint    = require("tslint")
 
