@@ -37,7 +37,7 @@
         "node":                           ">=7.6.0"
     },
     "scripts": {
-        "prepublish": "eslint --config eslint.yaml gemstone-linter-ts.js"
+        "prepublishOnly": "eslint --config eslint.yaml gemstone-linter-ts.js"
     },
     "main": "./gemstone-linter-ts.js"
 }
