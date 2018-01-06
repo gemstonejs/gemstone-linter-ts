@@ -29,7 +29,7 @@
     },
     "dependencies" : {
         "mz":                             "~2.7.0",
-        "gemstone-config-tslint":         "~0.9.11",
+        "gemstone-config-tslint":         "~0.9.12",
         "tslint":                         "~5.8.0",
         "typescript":                     "~2.6.2"
     },
