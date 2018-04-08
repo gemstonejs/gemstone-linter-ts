@@ -19,19 +19,19 @@
         "url":  "http://github.com/gemstonejs/gemstone-linter-ts/issues"
     },
     "devDependencies": {
-        "eslint":                         "~4.18.2",
+        "eslint":                         "~4.19.1",
         "eslint-config-standard":         "~11.0.0",
         "eslint-plugin-standard":         "~3.0.1",
-        "eslint-plugin-promise":          "~3.6.0",
-        "eslint-plugin-import":           "~2.9.0",
+        "eslint-plugin-promise":          "~3.7.0",
+        "eslint-plugin-import":           "~2.10.0",
         "eslint-plugin-node":             "~6.0.1",
         "babel-eslint":                   "~8.2.2"
     },
     "dependencies" : {
         "mz":                             "~2.7.0",
-        "gemstone-config-tslint":         "~0.9.13",
+        "gemstone-config-tslint":         "~0.9.14",
         "tslint":                         "~5.9.1",
-        "typescript":                     "~2.7.2"
+        "typescript":                     "~2.8.1"
     },
     "engines": {
         "node":                           ">=7.6.0"
