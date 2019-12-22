@@ -12,10 +12,10 @@ const TSLint    = require("tslint")
 /*  exported API function  */
 module.exports = async function (filenames, opts = {}, report = { sources: {}, findings: [] }) {
     /*  setup TSLint CLI engine  */
-    let rules = {}
+    const rules = {}
     Object.assign(rules, opts.rules)
-    let linter = new TSLint.Linter({})
-    let linterConfigFile = require.resolve("gemstone-config-tslint/tslint.json")
+    const linter = new TSLint.Linter({})
+    const linterConfigFile = require.resolve("gemstone-config-tslint/tslint.json")
 
     /*  interate over all source files  */
     let passed = true
@@ -27,18 +27,18 @@ module.exports = async function (filenames, opts = {}, report = { sources: {}, f
             opts.progress(i / filenames.length, `linting TS: ${filenames[i]}`)
 
         /*  execute TSLint on given source file  */
-        let content = await fs.readFile(filenames[i], "utf8")
-        let configuration = TSLint.Configuration.findConfiguration(linterConfigFile, filenames[i]).results
+        const content = await fs.readFile(filenames[i], "utf8")
+        const configuration = TSLint.Configuration.findConfiguration(linterConfigFile, filenames[i]).results
         linter.lint(filenames[i], content, configuration)
-        let result = linter.getResult()
+        const result = linter.getResult()
 
         /*  report linting results  */
         if (result.errorCount > 0 || result.warningCount > 0) {
             passed = false
             result.failures.forEach((failure) => {
-                let filename = path.relative(process.cwd(), failure.fileName)
+                const filename = path.relative(process.cwd(), failure.fileName)
                 report.sources[filename] = failure.rawLines
-                let [ ruleProc, ruleId ] = [ "tslint", failure.ruleName ]
+                const [ ruleProc, ruleId ] = [ "tslint", failure.ruleName ]
                 report.findings.push({
                     ctx:      "TS",
                     filename: filename,
